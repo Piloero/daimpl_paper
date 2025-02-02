@@ -1,0 +1,4 @@
+/.vscode/
+.lake/
+/llvm-experiment/compiled/
+/llvm-experiment/decompiled/
