@@ -11,9 +11,13 @@ Course at TU Darmstadt.
 In order to demonstrate that the optimized examples we provide in the paper do 
 not modify any of the program semantics, we've included some code written in
 [LEAN](https://lean-lang.org/). This is also the programming language used
-for the examples in the paper.
+for the examples in the paper. The lean code that we present here, along with
+test cases is contained in ``lean-examples/Main.lean``.
 
-TODO: Provide instructions how to run
+To run this file, we suggest you install [LEAN VSCode/VSCodium extension](https://marketplace.visualstudio.com/items?itemName=leanprover.lean4). This
+will automatically install the LEAN version manager (ELAN) and the correct
+LEAN version. When you open the Main file in VSCode, you'll find further
+explanations of the code in there.
 
 ## LLVM Experiment
 
@@ -31,7 +35,11 @@ Our experiments with LLVM and a decompiler have shown that this redundancy is
 successfullly detected and eliminated when using LLVM. To be able to replicate
 this example on other machines, we've used docker images from Docker Hub for 
 compilation and disassembly. You can run the following commands to compile and 
-decompile the ``source.c`` file yourself.
+decompile the ``source.c`` file yourself. To make the compilation reproducible,
+we used compilers and decompilers that are packaged in docker images from
+docker hub. To be able to run the examples below, you need to have Docker
+installed. An easy way to do this is to install 
+[Docker Desktop](https://www.docker.com/products/docker-desktop/).
 
 ```bash
 # Enter the llvm-experiment directory
